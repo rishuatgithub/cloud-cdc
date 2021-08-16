@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  mysql-employee:
+    container_name: source-database
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3305:3305
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employee
